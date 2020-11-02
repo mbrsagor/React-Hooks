@@ -1,5 +1,6 @@
 import React from 'react';
 import Hooks from './components/Hooks';
+import Counter from './components/Counter';
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
           <h2>Welcome to React Hooks</h2>
           <hr />
           <Hooks />
+          <Counter/>
         </div>
       </div>
     </div>

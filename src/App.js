@@ -1,7 +1,8 @@
 import React from 'react';
 import Hooks from './components/Hooks';
 import Counter from './components/Counter';
-import User from './components/User';
+// import User from './components/User';
+import Contact from './components/Contact';
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
           <Counter />
           <br />
           <hr />
-          <User/>
+          <Contact/>
         </div>
       </div>
     </div>

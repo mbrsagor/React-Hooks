@@ -1,6 +1,7 @@
 import React from 'react';
 import Hooks from './components/Hooks';
 import Counter from './components/Counter';
+import User from './components/User';
 
 const App = () => {
   return (
@@ -10,7 +11,10 @@ const App = () => {
           <h2>Welcome to React Hooks</h2>
           <hr />
           <Hooks />
-          <Counter/>
+          <Counter />
+          <br />
+          <hr />
+          <User/>
         </div>
       </div>
     </div>

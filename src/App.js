@@ -1,8 +1,9 @@
 import React from 'react';
-import Hooks from './components/Hooks';
-import Counter from './components/Counter';
+// import Hooks from './components/Hooks';
+// import Counter from './components/Counter';
 // import User from './components/User';
 import Contact from './components/Contact';
+import Login from './components/Login';
 
 const App = () => {
   return (
@@ -10,12 +11,15 @@ const App = () => {
       <div className="row">
         <div className="col-lg-6 offset-3">
           <h2>Welcome to React Hooks</h2>
-          <hr />
+          {/* <hr />
           <Hooks />
-          <Counter />
+          <Counter /> */}
           <br />
           <hr />
-          <Contact/>
+          <Contact />
+          <br />
+          <hr />
+          <Login />
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ const Counter = () => {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-lg-12">
+                <div className="col-lg-6 offset-3">
                     <div className="card text-center">
                         <div className="card-header">
                             <h4 className="card-title">Counter</h4>

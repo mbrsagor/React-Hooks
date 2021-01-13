@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState, useContext } from "react";
+import _ from "lodash";
+
+import { ContactContext } from '../../context/contactContext';
 
 const ContactForm = () => {
 
     const name = useFormInput("");
     const email = useFormInput("");
+    // const [state, dispatch] = useContext(ContactContext);
     
     const onSubmit = () => {
-        
+        // dispatch({
+        //     type: "ADD_CONTACT",
+        //     payload: { id: _.uniqueId(10), name: name.value, email: email.value }
+        // })
+
+        // Reset Form
+        name.onReset();
+        email.onReset();
     }
 
     return (
@@ -46,6 +57,20 @@ const ContactForm = () => {
 export default ContactForm;
 
 
-const useFormInput = () => {
+const useFormInput = (initalValues) => {
+    const [value, setValue] = useState(initalValues);
+
+    const handleChange = e => {
+        setValue(e.target.value);
+    };
+
+    const handleReset = () => {
+        setValue("");
+    };
     
+    return {
+        value,
+        onChange: handleChange,
+        onReset: handleReset
+    };
 }

@@ -1,13 +1,19 @@
-import React, { useState, useContext } from 'react';
+import React, {useContext } from 'react';
 
 import { ContactContext } from '../../context/contactContext';
 
 
 const ContactTable = () => {
     const [state, dispatch] = useContext(ContactContext);
-    const [selectedId, setSelectedId] = useState();
 
     // console.log(state);
+
+    const delContact = id => {
+        dispatch({
+            type: "DEL_CONTACT",
+            payload: id
+        })
+    };
 
     return (
         <>
@@ -27,7 +33,11 @@ const ContactTable = () => {
                             <td>{contact.name}</td>
                             <td>{contact.email}</td>
                             <td>
-                                <button className="btn btn-danger btn-sm">Delete</button>
+                                <button
+                                    onClick={() => delContact(contact.id)}
+                                    className="btn btn-danger btn-sm">
+                                    Delete
+                                </button>
                             </td>
                         </tr> 
                     ))}

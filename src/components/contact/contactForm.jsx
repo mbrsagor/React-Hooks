@@ -4,10 +4,10 @@ import _ from "lodash";
 import { ContactContext } from '../../context/contactContext';
 
 const ContactForm = () => {
+    // const [state, dispatch] = useContext(ContactContext);
 
     const name = useFormInput("");
     const email = useFormInput("");
-    // const [state, dispatch] = useContext(ContactContext);
     
     const onSubmit = () => {
         // dispatch({

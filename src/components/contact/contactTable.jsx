@@ -11,12 +11,13 @@ const ContactTable = () => {
 
     return (
         <>
-            <table className="table">
+            <table className="table table-bordered table-striped">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
                         <th>Email</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,6 +26,9 @@ const ContactTable = () => {
                             <td>{contact.id}</td>
                             <td>{contact.name}</td>
                             <td>{contact.email}</td>
+                            <td>
+                                <button className="btn btn-danger btn-sm">Delete</button>
+                            </td>
                         </tr> 
                     ))}
                 </tbody>
